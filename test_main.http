@@ -1,0 +1,11 @@
+# Test your FastAPI endpoints
+
+GET http://127.0.0.1:8000/
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8001/verify_account_number/9900876366/
+Accept: application/json
+
+###
