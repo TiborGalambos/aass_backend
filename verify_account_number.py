@@ -1,16 +1,12 @@
 import sqlite3
-from pyzeebe import ZeebeWorker, Job, create_insecure_channel
 
 from fastapi import FastAPI
 app = FastAPI()
 from fastapi.responses import JSONResponse
-zeebe_worker = ZeebeWorker(channel=create_insecure_channel(hostname="localhost", port=8005))
-zeebe_worker.work()
 
-# @zeebe_worker.task(task_type="verify-receiver")
+
 @app.get("/verify_receiver/{account_number}")
-async def verify_receiver(job: Job) -> dict:
-    account_number = job.variables.get("account_number")
+async def verify_receiver(account_number: int):
     conn = sqlite3.connect('external')
     cursor = conn.cursor()
 
