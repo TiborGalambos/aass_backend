@@ -10,3 +10,12 @@
 `verify_account_number:app --reload --port 8001`
 
 `uvicorn main:app --reload --port 8000`
+
+
+`PS C:\Users\tibor\Desktop\aass-backend> cd C:\Users\tibor\Desktop\aass-frontend`
+
+`PS C:\Users\tibor\Desktop\aass-frontend> set FLASK_APP=app.py`
+
+`PS C:\Users\tibor\Desktop\aass-frontend> set FLASK_ENV=development`
+
+`PS C:\Users\tibor\Desktop\aass-frontend> flask run`

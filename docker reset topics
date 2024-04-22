@@ -1,0 +1,15 @@
+docker exec -it ef38cf30affc /usr/bin/kafka-topics --list --bootstrap-server localhost:9092
+docker exec -it ef38cf30affc /usr/bin/kafka-topics --bootstrap-server localhost:9092 --delete --topic change_balance_topic
+docker exec -it ef38cf30affc /usr/bin/kafka-topics --bootstrap-server localhost:9092 --delete --topic check_balance_topic
+docker exec -it ef38cf30affc /usr/bin/kafka-topics --bootstrap-server localhost:9092 --delete --topic gateway_topic
+docker exec -it ef38cf30affc /usr/bin/kafka-topics --bootstrap-server localhost:9092 --delete --topic main_topic
+docker exec -it ef38cf30affc /usr/bin/kafka-topics --bootstrap-server localhost:9092 --delete --topic verify_receiver_topic
+docker exec -it ef38cf30affc /usr/bin/kafka-topics --bootstrap-server localhost:9092 --delete --topic verify_sender_topic
+docker exec -it ef38cf30affc /usr/bin/kafka-topics --list --bootstrap-server localhost:9092
+docker exec -it ef38cf30affc /usr/bin/kafka-topics --bootstrap-server localhost:9092 --create --topic change_balance_topic --partitions 1 --replication-factor 1
+docker exec -it ef38cf30affc /usr/bin/kafka-topics --bootstrap-server localhost:9092 --create --topic check_balance_topic --partitions 1 --replication-factor 1
+docker exec -it ef38cf30affc /usr/bin/kafka-topics --bootstrap-server localhost:9092 --create --topic gateway_topic --partitions 1 --replication-factor 1
+docker exec -it ef38cf30affc /usr/bin/kafka-topics --bootstrap-server localhost:9092 --create --topic main_topic --partitions 1 --replication-factor 1
+docker exec -it ef38cf30affc /usr/bin/kafka-topics --bootstrap-server localhost:9092 --create --topic verify_receiver_topic --partitions 1 --replication-factor 1
+docker exec -it ef38cf30affc /usr/bin/kafka-topics --bootstrap-server localhost:9092 --create --topic verify_sender_topic --partitions 1 --replication-factor 1
+docker exec -it ef38cf30affc /usr/bin/kafka-topics --list --bootstrap-server localhost:9092
